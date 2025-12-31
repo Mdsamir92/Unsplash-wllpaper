@@ -11,6 +11,7 @@ import {
 } from "../features/searchSlice";
 import { saveMedia } from "./SaveMedia";
 import Collection from "./Collection";
+import Hero from "./Hero";
 
 
 function Home() {
@@ -79,28 +80,11 @@ function Home() {
           </p>
         )}
 
-        {/* HERO IMAGE */}
-        {showHero && (
-          <div className="mt-10 rounded-2xl overflow-hidden shadow-lg relative">
-            <img
-              src="https://images.unsplash.com/photo-1764377848067-aefbce306f80?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0"
-              alt="Hero"
-              className="w-full h-[420px] object-cover"
-            />
-
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <div className="text-center text-white px-4">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                  Discover Stunning Media
-                </h1>
-                <p className="text-lg opacity-90">
-                  Search photos and videos from the world’s best creators
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
+      {
+        showHero && (
+          <Hero/>
+        )
+      }
 
 
         {/* Results */}
